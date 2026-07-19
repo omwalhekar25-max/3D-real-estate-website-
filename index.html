@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate | Elite Luxury Properties</title>
+    <!-- Google Fonts for AUREUM serif elegance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== MAIN HEADER BAR ===== -->
+    <header id="main-header" class="main-header">
+        <!-- Left: Brand heading -->
+        <div class="header-brand">
+            <span class="header-logo-icon">&#9632;</span>
+            <h1 class="header-title">Real Estate</h1>
+        </div>
+
+        <!-- Right: Three-dots menu -->
+        <div class="header-nav-wrap">
+            <button id="dots-menu-btn" class="dots-menu-btn" aria-label="Open navigation menu" aria-expanded="false">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </button>
+
+            <!-- Dropdown panel -->
+            <nav id="dots-dropdown" class="dots-dropdown" role="navigation" aria-label="Site pages">
+                <ul class="dropdown-list">
+                    <li>
+                        <a href="#home" class="dropdown-link" id="nav-home">
+                            <span class="nav-icon">&#8962;</span>
+                            Homepage
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="dropdown-link" id="nav-about">
+                            <span class="nav-icon">&#9432;</span>
+                            About Page
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services" class="dropdown-link" id="nav-services">
+                            <span class="nav-icon">&#10022;</span>
+                            Services / Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="dropdown-link" id="nav-contact">
+                            <span class="nav-icon">&#9993;</span>
+                            Contact Page
+                        </a>
+                    </li>
+                    <li class="dropdown-divider"></li>
+                    <li>
+                        <a href="#privacy" class="dropdown-link dropdown-link--muted" id="nav-privacy">
+                            <span class="nav-icon">&#128274;</span>
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Premium Preloader Overlay -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="logo-animation">
+                <span class="logo-letter">A</span>
+                <span class="logo-letter">U</span>
+                <span class="logo-letter">R</span>
+                <span class="logo-letter">E</span>
+                <span class="logo-letter">U</span>
+                <span class="logo-letter">M</span>
+            </div>
+            <div class="loader-track">
+                <div id="loader-bar" class="loader-bar"></div>
+            </div>
+            <div class="loader-status">
+                <span class="loader-text">ESTABLISHING SECURE CONNECTION</span>
+                <span id="loader-percentage" class="loader-percentage">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background 3D Canvas Container -->
+    <div class="canvas-container">
+        <canvas id="animation-canvas"></canvas>
+        <div class="canvas-gradient-overlay"></div>
+    </div>
+
+    <!-- Scroll Wrapper -->
+    <main class="scroll-wrapper">
+
+        <!-- Section 1: Signature Services -->
+        <section id="services" class="scroll-section active-section">
+            <div class="services-container glassmorphic-panel">
+                <span class="section-tagline">CURATED EXCELLENCE</span>
+                <h2 class="section-title">Signature Services</h2>
+                <p class="section-desc">A comprehensive ecosystem of luxury management, designed to return the world's most precious commodity to you: time.</p>
+                
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('private_jet.png');">
+                        <div class="service-card-content">
+                            <span class="service-tag">TRAVEL & LOGISTICS</span>
+                            <h3>Bespoke Aviation & Travel</h3>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="service-card" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('island_resort.png');">
+                        <div class="service-card-content">
+                            <span class="service-tag">WELLNESS</span>
+                            <h3>Private Retreats</h3>
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="service-card" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('villa_sunset.png');">
+                        <div class="service-card-content">
+                            <span class="service-tag">ASSETS</span>
+                            <h3>Asset Acquisition</h3>
+                        </div>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="service-card" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('mountain_dining.png');">
+                        <div class="service-card-content">
+                            <span class="service-tag">GASTRONOMY</span>
+                            <h3>Culinary Curation</h3>
+                        </div>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="service-card" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.75)), url('dubai_villa.png');">
+                        <div class="service-card-content">
+                            <span class="service-tag">ESTATES</span>
+                            <h3>Property Management</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Words from Our Global Inner Circle (Testimonial) -->
+        <section id="testimonials" class="scroll-section">
+            <div class="testimonial-card glassmorphic-panel">
+                <span class="section-tagline">TESTIMONIALS</span>
+                <h2 class="section-title">Words from Our Global Inner Circle</h2>
+                
+                <blockquote class="testimonial-quote">
+                    "Aureum doesn't just provide a service, they provide a state of mind. Their attention to detail in our last private acquisition was nothing short of miraculous. Truly the only partner we trust with our legacy."
+                </blockquote>
+                
+                <div class="testimonial-author">
+                    <div class="author-avatar">AJ</div>
+                    <div class="author-meta">
+                        <span class="author-name">Aurene Janze</span>
+                        <span class="author-title">Philanthropist & Tech Founder</span>
+                    </div>
+                    <div class="client-rating">99% Client Retention Rate</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Collective Portfolio -->
+        <section id="portfolio" class="scroll-section">
+            <div class="portfolio-container glassmorphic-panel">
+                <span class="section-tagline">EXCLUSIVITY REDEFINED</span>
+                <h2 class="section-title">The Collective Portfolio</h2>
+                <p class="section-desc">A curated glimpse into the most exclusive estates, maritime marvels, and remote sanctuaries across the globe.</p>
+                
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Collections</button>
+                    <button class="filter-btn" data-filter="residences">Residences</button>
+                    <button class="filter-btn" data-filter="yachts">Yachts</button>
+                    <button class="filter-btn" data-filter="destinations">Destinations</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item residences">
+                        <img src="villa_sunset.png" alt="Luxury Villa Sunset">
+                        <div class="item-overlay">
+                            <span>RESIDENCE</span>
+                            <h4>Mediterranean Sunset Villa</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item yachts">
+                        <img src="luxury_yacht.png" alt="Superyacht">
+                        <div class="item-overlay">
+                            <span>YACHT</span>
+                            <h4>Aureum Superyacht</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item destinations">
+                        <img src="mountain_dining.png" alt="Chalet Dining">
+                        <div class="item-overlay">
+                            <span>DESTINATION</span>
+                            <h4>Alpine Sanctuary Chalet</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item destinations">
+                        <img src="island_resort.png" alt="Island Resort">
+                        <div class="item-overlay">
+                            <span>DESTINATION</span>
+                            <h4>Private Island Bungalows</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item events">
+                        <img src="private_jet.png" alt="Private Jet">
+                        <div class="item-overlay">
+                            <span>EVENT</span>
+                            <h4>Aero Concierge Experience</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item residences">
+                        <img src="dubai_villa.png" alt="Dubai Villa">
+                        <div class="item-overlay">
+                            <span>RESIDENCE / DUBAI</span>
+                            <h4>Al Desert Estate</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-action">
+                    <a href="#contact" class="portfolio-cta">Start a Conversation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Your Direct Path & Personal Touch Inquiry Form -->
+        <section id="contact" class="scroll-section">
+            <div class="contact-grid">
+                
+                <!-- Left Details -->
+                <div class="contact-details glassmorphic-panel">
+                    <span class="section-tagline">DIRECT ACCESS</span>
+                    <h2 class="details-title">Your Direct Path to <em>Unrivaled Excellence</em></h2>
+                    <p class="details-desc">The AUREUM Concierge is at your disposal 24/7. Whether you seek to commission a new journey or require immediate assistance in Monaco, our elite representatives are ready to assist.</p>
+                    
+                    <div class="contact-info-list">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
+                            </div>
+                            <div>
+                                <span class="info-label">DIRECT LINE</span>
+                                <a href="tel:+37798062000" class="info-val">+377 98 06 20 00</a>
+                                <span class="info-sub">Available 24/7</span>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4M20,8L12,13L4,8V6L12,11L20,6V8Z"/></svg>
+                            </div>
+                            <div>
+                                <span class="info-label">CORRESPONDENCE</span>
+                                <a href="mailto:concierge@aureum-elite.mc" class="info-val">concierge@aureum-elite.mc</a>
+                                <span class="info-sub">Typical response: 15 mins</span>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/></svg>
+                            </div>
+                            <div>
+                                <span class="info-label">PRIVATE OFFICE</span>
+                                <span class="info-val">1 Place du Casino, 98000 Monaco</span>
+                                <span class="info-sub">By Appointment Only</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map placeholder -->
+                    <div class="map-placeholder">
+                        <div class="map-circle"></div>
+                        <span class="map-text">Monaco City Centre</span>
+                        <a href="https://maps.google.com" target="_blank" class="expand-map-btn">Expand Map</a>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="inquiry-container glassmorphic-panel">
+                    <span class="section-tagline">INQUIRY FORM</span>
+                    <h2 class="form-title">The Personal Touch</h2>
+                    
+                    <form id="inquiry-form" class="inquiry-form" onsubmit="event.preventDefault(); alert('Your inquiry has been transmitted. An elite representative will verify your invitation credentials.');">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <input type="text" id="fullname" required placeholder=" " value="Julian Sterling">
+                                <label for="fullname">Full Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" required placeholder=" " value="j.sterling@estate.com">
+                            </div>
+                        </div>
+                        <div class="form-row2">
+                            <div class="input-group">
+                                <input type="text" id="interest" required placeholder=" " value="Private Aviation">
+                                <label for="interest">Service Interest</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="phone" placeholder=" " value="+377 93 00 00 00">
+                                <label for="phone">Phone (Optional)</label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <textarea id="message" rows="4" placeholder=" ">How may we elevate your lifestyle today?</textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="submit-button">Send Inquiry</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 5: Newsletter & Footer -->
+        <section id="newsletter-section" class="scroll-section">
+            <div class="footer-wrap">
+                <div class="newsletter-box glassmorphic-panel">
+                    <h2>Join the Inner Circle</h2>
+                    <p>Receive monthly intelligence on the world's most exclusive destinations, off-market assets, and elite cultural events.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to the AUREUM Inner Circle mailing.');">
+                        <input type="email" placeholder="Your primary email" required class="newsletter-input">
+                        <button type="submit" class="newsletter-submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <!-- Footer contents -->
+                <footer class="aureum-footer">
+                    <div class="footer-brand">
+                        <span class="footer-logo">AUREUM</span>
+                        <p class="footer-tag">Redefining the art of luxury lifestyle management across the globe.</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Press</a>
+                        <a href="#">Careers</a>
+                    </div>
+                    <div class="footer-copy">
+                        <span>© 2024 AUREUM ELITE LIFESTYLE. ALL RIGHTS RESERVED.</span>
+                        <div class="footer-cities">NEW YORK &nbsp;|&nbsp; LONDON &nbsp;|&nbsp; GENEVA &nbsp;|&nbsp; MONACO</div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating HUD Controls (Translucent Gold styling) -->
+    <div class="hud-controls glassmorphic-panel">
+        <div class="hud-item autoplay-btn-wrap">
+            <button id="autoplay-btn" class="hud-icon-btn" title="Toggle Auto-Play Demo">
+                <svg viewBox="0 0 24 24" width="18" height="18">
+                    <polygon points="5 3 19 12 5 21 5 3" class="play-icon"/>
+                    <rect x="6" y="4" width="3" height="16" class="pause-icon hidden"/>
+                    <rect x="15" y="4" width="3" height="16" class="pause-icon hidden"/>
+                </svg>
+            </button>
+        </div>
+        <div class="hud-item progress-slider-wrap">
+            <span class="hud-label">ROTATION</span>
+            <input type="range" id="frame-scrubber" min="1" max="240" value="1" class="hud-slider">
+            <span id="frame-counter" class="hud-value">001 / 240</span>
+        </div>
+        <div class="hud-item scroll-percentage-wrap">
+            <span class="hud-label">SCROLL</span>
+            <span id="scroll-percentage" class="hud-value">0%</span>
+        </div>
+    </div>
+
+    <!-- JS Core -->
+    <script src="app.js"></script>
+
+    <!-- Header Dropdown Toggle -->
+    <script>
+        (function () {
+            const btn = document.getElementById('dots-menu-btn');
+            const dropdown = document.getElementById('dots-dropdown');
+
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const isOpen = dropdown.classList.toggle('open');
+                btn.setAttribute('aria-expanded', isOpen);
+                btn.classList.toggle('active', isOpen);
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!dropdown.contains(e.target) && e.target !== btn) {
+                    dropdown.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.classList.remove('active');
+                }
+            });
+
+            // Close after clicking a nav link
+            dropdown.querySelectorAll('.dropdown-link').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    dropdown.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.classList.remove('active');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
